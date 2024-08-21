@@ -11,17 +11,26 @@ const Products = ({
   title,
   description,
   image
-}: Props) => (
-  <Card>
-    <img src={image} alt={title} />
-    <BottomCard>
-      <CardHeader>
-        <Title>{title}</Title>
-      </CardHeader>
-      <Description>{description}</Description>
-      <Button variant="secundary"  to="/product" type={'button'} title={'Adicione ao carrinho'} children={'Adicionar ao carrinho'} />
-    </BottomCard>
-  </Card>
-);
+}: Props) => {
+const getDescription = (descricao: string) => {
+  if (descricao.length > 150) {
+    return descricao.slice(0,147)+'...'
+  }
+  return descricao
+}
+
+  return (
+    <Card>
+      <img src={image} alt={title} />
+      <BottomCard>
+        <CardHeader>
+          <Title>{title}</Title>
+        </CardHeader>
+        <Description>{getDescription(description)}</Description>
+        <Button variant="secundary"  to="/product" type={'button'} title={'Adicione ao carrinho'} children={'Adicionar ao carrinho'} />
+      </BottomCard>
+    </Card>
+  )
+};
 
 export default Products

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../../styles";
+import { ClipLoader } from "react-spinners";
 
 export const Banner = styled.div`
   position: relative;
@@ -46,4 +47,16 @@ export const Infos = styled.div`
     margin-top: 25px;
     margin-bottom: 156px;
   }
+`;
+
+export const SpinnerContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: ${colors.white_bg};
 `;

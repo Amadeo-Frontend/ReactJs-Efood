@@ -1,12 +1,12 @@
 
 import { BrowserRouter } from 'react-router-dom'
 import { GlobalStyle } from './styles'
-import Rotas from './routs'
+import AppRouts from './routs'
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyle />
-      <Rotas />
+      <AppRouts />
     </BrowserRouter>
   )
 }

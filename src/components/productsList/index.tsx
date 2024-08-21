@@ -1,11 +1,11 @@
-import ProductsTypes from '../../models/ProductsTypes';
 import Products from '../products'
 import { Title } from '../restaurant/styles'
 import { List, ListContainer } from './styles'
+import { CardapioItem } from '../../pages/Home';
 
 export type Props = {
   title: string
-  types: ProductsTypes[]
+  types: CardapioItem[];
 }
 const RestaurantsList = ({ title, types }: Props) => (
   <>
@@ -16,9 +16,9 @@ const RestaurantsList = ({ title, types }: Props) => (
         {types.map((type) => (
           <Products
             key={type.id}
-            title={type.title}
-            description={type.description}
-            image={type.image}
+            title={type.nome}
+            description={type.descricao}
+            image={type.foto}
           />
         ))}
       </List>

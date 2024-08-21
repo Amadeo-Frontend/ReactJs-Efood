@@ -1,12 +1,10 @@
 
 import RestaurantsList from '../../components/restaurantList'
-
-
-
 import Header from '../../components/header'
 import { Container } from '../../styles'
 import Footer from '../../components/footer'
 import { useEffect, useState } from 'react'
+
 
 export type CardapioItem = {
   foto: string;
@@ -25,7 +23,7 @@ export type Promo = {
   descricao: string;
   capa: string;
   destacado: boolean;
-  cardapio: CardapioItem[];
+  cardapio: CardapioItem[]
 };
 
 
